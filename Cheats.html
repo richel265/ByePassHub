@@ -1,0 +1,147 @@
+<h2 id="byepasshub-cheats-updated-jul-11">
+    ByepassHub &gt; Cheats | updated Jul 11
+</h2>
+<h2 id="if-you-like-this-make-sure-to-star-it-">
+    If you like this, make sure to star it!
+</h2>
+<p>
+    <strong>Other Files</strong>: <br />
+    <strong>Unblocker(Proxies) links</strong>: Go
+    <a href="https://github.com/wea-f/ByePassHub/blob/main/mainUnblockers.md"
+        >here</a
+    >
+    or go to the mainUnblockers.md file <br />
+    <strong>Exploits, Bypasses, Bookmarklets:</strong> Go
+    <a href="https://github.com/wea-f/ByePassHub/blob/main/Exploits/README.md"
+        >here</a
+    >
+    <br />
+    <strong>Main Games:</strong> Go
+    <a href="https://github.com/wea-f/ByePassHub/blob/main/Games.md">here</a> or
+    go to the Games.md file <br />
+    <strong>Back to Main Hub:</strong> Go
+    <a href="https://github.com/wea-f/ByePassHub/blob/main/README.md">here</a>
+    or go to the main README.md file <br />
+</p>
+<hr />
+<p>
+    This is a collection of cheats for learning game platforms like Kahoot or
+    Blooket. <br />
+    Also, I did not make these cheats, I found them through searching the web
+    and repositories. <br />
+    <strong
+        >I do not condone the use of these unfair advantages in an educational
+        environment. This can ruin the experience for others and it is best to
+        play with integrity when learning.</strong
+    >
+</p>
+<hr />
+<p>
+    Try putting these links in a proxy if they are blocked. It probably
+    won&#39;t work, but it&#39;s worth a try.
+</p>
+<h2 id="-recommended-cheat-hubs"><strong>RECOMMENDED</strong>: Cheat Hubs</h2>
+<p>
+    The ultimate hub for every learning game platform, used for Kahoot, Gimkit,
+    Blooket, Brainly (bypass exercise limit), and more! <br />
+    <a href="https://schoolcheats.net/dashboard"
+        >https://schoolcheats.net/dashboard</a
+    >
+    <br />
+    <a href="https://cheatnetwork.eu/">https://cheatnetwork.eu/</a> <br />
+    <a href="https://quizit.online/">https://quizit.online/</a> <br />
+</p>
+<h2 id="kahoot-cheats">Kahoot Cheats</h2>
+<p>
+    <a href="https://kahoot.club/">https://kahoot.club/</a> <br />
+    <a href="https://mem.rip/kahoot/">https://mem.rip/kahoot/</a> <br />
+</p>
+<h2
+    id="blooket-cheats-you-can-use-an-unblocker-and-it-still-works-you-need-to-be-able-to-execute-bookmarklets"
+>
+    Blooket Cheats (You can use an unblocker and it still works) | You need to
+    be able to execute bookmarklets
+</h2>
+<p>
+    <a href="https://05konz.github.io/Blooket-Cheats/"
+        >https://05konz.github.io/Blooket-Cheats/</a
+    >
+    <br />
+    <a href="https://github.com/05Konz/Blooket-Cheats"
+        >https://github.com/05Konz/Blooket-Cheats</a
+    >
+    <br />
+</p>
+<h2 id="quizlet-cheats">Quizlet Cheats</h2>
+<p>
+    These are found from this repository:
+    <a href="https://github.com/UndercoverGoose/classroom-cheats"
+        >https://github.com/UndercoverGoose/classroom-cheats</a
+    >
+    <br />
+    In this repository, you&#39;ll find scripts. You can execute this via
+    bookmarklets or console. <br />
+    Bookmarklet: Quizlet Live:
+</p>
+<pre><code class="lang-js">javascript:<span class="hljs-keyword">try</span>{<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getSetId</span>(<span class="hljs-params">pin</span>)</span>{<span class="hljs-keyword">const</span> res=<span class="hljs-keyword">await</span> fetch(<span class="hljs-string">`https://quizlet.com/webapi/3.8/multiplayer/game-instance?gameCode=<span class="hljs-subst">${pin}</span>`</span>);<span class="hljs-keyword">const</span> json=<span class="hljs-keyword">await</span> res.json();<span class="hljs-keyword">if</span>(json.error)<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(json.error.message);<span class="hljs-keyword">return</span> json.gameInstance.itemId;}<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getSetData</span>(<span class="hljs-params">setId</span>)</span>{<span class="hljs-keyword">const</span> res=<span class="hljs-keyword">await</span> fetch(<span class="hljs-string">`https://quizlet.com/<span class="hljs-subst">${setId}</span>`</span>);<span class="hljs-keyword">const</span> text=<span class="hljs-keyword">await</span> res.text();<span class="hljs-keyword">const</span> data=text.match(<span class="hljs-regexp">/\\"termIdToTermsMap\\":{.+?{.+?\\"termSort\\":/gi</span>)?.[<span class="hljs-number">0</span>];<span class="hljs-keyword">if</span>(!data)<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"Failed to parse set data."</span>);<span class="hljs-keyword">const</span> parsed=<span class="hljs-built_in">JSON</span>.parse(data.slice(<span class="hljs-number">21</span>,<span class="hljs-number">-14</span>).replaceAll(<span class="hljs-string">`\\"`</span>,<span class="hljs-string">`"`</span>));<span class="hljs-keyword">return</span>[<span class="hljs-built_in">Object</span>.fromEntries(<span class="hljs-built_in">Object</span>.values(parsed).map(<span class="hljs-function">(<span class="hljs-params">{word, definition}</span>)=&gt;</span>[word, definition])),<span class="hljs-built_in">Object</span>.fromEntries(<span class="hljs-built_in">Object</span>.values(parsed).map(<span class="hljs-function">(<span class="hljs-params">{word, definition}</span>)=&gt;</span>[definition, word]))];}<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getActiveQuestion</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-keyword">try</span>{<span class="hljs-keyword">const</span> question=<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".StudentPrompt-text"</span>).textContent;<span class="hljs-keyword">const</span> answers=<span class="hljs-built_in">Array</span>.from(<span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">".StudentAnswerOption-text"</span>));<span class="hljs-keyword">return</span>[question, answers];}<span class="hljs-keyword">catch</span>{}<span class="hljs-keyword">return</span>[<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>];}(<span class="hljs-keyword">async</span>()=&gt;{<span class="hljs-keyword">const</span> pin=prompt(<span class="hljs-string">"Enter PIN, like: XXX-XXX"</span>,<span class="hljs-string">""</span>).match(<span class="hljs-regexp">/[0-9a-zA-Z]/g</span>).join(<span class="hljs-string">""</span>);<span class="hljs-keyword">if</span>(pin.length!==<span class="hljs-number">6</span>)<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"Pin must be 6 characters in length."</span>);<span class="hljs-keyword">const</span> setId=<span class="hljs-keyword">await</span> getSetId(pin);<span class="hljs-keyword">const</span>[term2Def, def2Term]=<span class="hljs-keyword">await</span> getSetData(setId);setInterval(<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-keyword">const</span>[question,choices]=getActiveQuestion();<span class="hljs-keyword">if</span>(!question||!choices)<span class="hljs-keyword">return</span>;<span class="hljs-keyword">if</span>(question <span class="hljs-keyword">in</span> term2Def){choices.forEach(<span class="hljs-function">(<span class="hljs-params">choice</span>)=&gt;</span>{<span class="hljs-keyword">if</span>(choice.textContent===term2Def[question])choice.style.fontWeight=<span class="hljs-string">"bolder"</span>;});}<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(question <span class="hljs-keyword">in</span> def2Term){choices.forEach(<span class="hljs-function">(<span class="hljs-params">choice</span>)=&gt;</span>{<span class="hljs-keyword">if</span>(choice.textContent===def2Term[question])choice.style.fontWeight=<span class="hljs-string">"bolder"</span>;});}<span class="hljs-keyword">else</span>{choices.forEach(<span class="hljs-function">(<span class="hljs-params">choice</span>)=&gt;</span>{choice.style.fontWeight=<span class="hljs-string">"normal"</span>;});}},<span class="hljs-number">0</span>);})()}<span class="hljs-keyword">catch</span>(err){alert(err)};<span class="hljs-keyword">void</span> <span class="hljs-number">0</span>
+</code></pre>
+<p>Quizlet Match:</p>
+<pre><code class="lang-js">javascript:<span class="hljs-function">(<span class="hljs-params"><span class="hljs-keyword">function</span>(</span>){<span class="hljs-params">const</span> <span class="hljs-params">matches</span>={};<span class="hljs-params">Quizlet</span>.<span class="hljs-params">matchModeData</span>.<span class="hljs-params">terms</span>.<span class="hljs-params">forEach</span>(<span class="hljs-params">(term</span>)=&gt;</span>{matches[term.word]=term.definition});<span class="hljs-keyword">let</span> css=<span class="hljs-string">'FormattedText notranslate TermText MatchModeQuestionGridTile-text'</span>;<span class="hljs-keyword">if</span>(<span class="hljs-built_in">document</span>.getElementsByClassName(css).length===<span class="hljs-number">0</span>){css=<span class="hljs-string">'MatchModeQuestionScatterTile'</span>}<span class="hljs-keyword">const</span> tiles=<span class="hljs-built_in">Array</span>.from(<span class="hljs-built_in">document</span>.getElementsByClassName(css));<span class="hljs-keyword">const</span> colors=[<span class="hljs-string">'#f93640'</span>,<span class="hljs-string">'#f98836'</span>,<span class="hljs-string">'#f9e936'</span>,<span class="hljs-string">'#3df936'</span>,<span class="hljs-string">'#36f9d9'</span>,<span class="hljs-string">'#3650f9'</span>,<span class="hljs-string">'#7e36f9'</span>,<span class="hljs-string">'#dc36f9'</span>,<span class="hljs-string">'#ffffff'</span>,<span class="hljs-string">'#a3a3a3'</span>,<span class="hljs-string">'#424242'</span>];<span class="hljs-built_in">Array</span>.from(<span class="hljs-built_in">document</span>.getElementsByClassName(<span class="hljs-string">'MatchModeQuestionGridTile-image'</span>)).forEach(<span class="hljs-function">(<span class="hljs-params">image</span>)=&gt;</span>{image.style.display=<span class="hljs-string">'none'</span>});<span class="hljs-keyword">let</span> colorIndex=<span class="hljs-number">0</span>;<span class="hljs-keyword">for</span>(<span class="hljs-keyword">const</span> term <span class="hljs-keyword">in</span> matches){<span class="hljs-keyword">const</span> definition=matches[term];tiles.forEach(<span class="hljs-function">(<span class="hljs-params">tile</span>)=&gt;</span>{<span class="hljs-keyword">if</span>(tile.textContent===term){tiles.forEach(<span class="hljs-function">(<span class="hljs-params">box</span>)=&gt;</span>{<span class="hljs-keyword">if</span>(box.textContent===definition){box.style.background=colors[colorIndex];box.style.color=<span class="hljs-string">'black'</span>}});tile.style.background=colors[colorIndex];tile.style.color=<span class="hljs-string">'black'</span>;colorIndex+=<span class="hljs-number">1</span>}})}})();<span class="hljs-keyword">void</span> <span class="hljs-number">0</span>
+</code></pre>
+<p>Quizlet Gravity:</p>
+<pre><code class="lang-js">javascript:<span class="hljs-function">(<span class="hljs-params"><span class="hljs-keyword">function</span>(</span>){<span class="hljs-params">if</span>(<span class="hljs-params">!<span class="hljs-built_in">window</span>.gooseGravity</span>){<span class="hljs-params">window</span>.<span class="hljs-params">gooseGravity</span>=<span class="hljs-params">true</span>;<span class="hljs-params">const</span> <span class="hljs-params">matches</span>={};<span class="hljs-params">Quizlet</span>.<span class="hljs-params">gravityModeData</span>.<span class="hljs-params">terms</span>.<span class="hljs-params">forEach</span>(<span class="hljs-params">(term</span>)=&gt;</span>{matches[term.word]=term.definition});<span class="hljs-keyword">const</span> reversed={};<span class="hljs-keyword">for</span>(<span class="hljs-keyword">const</span> term <span class="hljs-keyword">in</span> matches){reversed[matches[term]]=term}setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-keyword">const</span> asteroids=<span class="hljs-built_in">Array</span>.from(<span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'.TermText'</span>));<span class="hljs-keyword">if</span>(asteroids.length===<span class="hljs-number">0</span>){<span class="hljs-keyword">return</span>}asteroids.forEach(<span class="hljs-function">(<span class="hljs-params">asteroid</span>)=&gt;</span>{<span class="hljs-keyword">const</span> term=asteroid.textContent;<span class="hljs-keyword">if</span>(asteroid.gooseAnswered){<span class="hljs-keyword">return</span>}<span class="hljs-keyword">if</span>(term <span class="hljs-keyword">in</span> matches){asteroid.textContent=matches[term];asteroid.gooseAnswered=<span class="hljs-literal">true</span>}<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(term <span class="hljs-keyword">in</span> reversed){asteroid.textContent=reversed[term];asteroid.gooseAnswered=<span class="hljs-literal">true</span>}})},<span class="hljs-number">100</span>)}})();<span class="hljs-keyword">void</span> <span class="hljs-number">0</span>
+</code></pre>
+<p>
+    You can find the scripts for the console in the
+    <a
+        href="https://github.com/UndercoverGoose/classroom-cheats/tree/master/scripts"
+        >scripts folder</a
+    >
+    of the repository.
+</p>
+<h2 id="gimkit-cheats">Gimkit Cheats</h2>
+<p>
+    Repository:
+    <a href="https://github.com/bob486/quizlet/blob/master/gimkit/README.md"
+        >https://github.com/bob486/quizlet/blob/master/gimkit/README.md</a
+    >
+    <br />
+    Usage:
+    <a
+        href="https://github.com/bob486/quizlet/blob/master/gimkit/README.md#usage"
+        >https://github.com/bob486/quizlet/blob/master/gimkit/README.md#usage</a
+    >
+    <br />
+    Bookmarklet:
+</p>
+<pre><code class="lang-js">javascript:(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-keyword">let</span> l=<span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"script"</span>);l.src=<span class="hljs-string">"https://undercovermoose.github.io/gimkitjs/gimkit.js"</span>;<span class="hljs-built_in">document</span>.body.appendChild(l);}());<span class="hljs-keyword">void</span> <span class="hljs-number">0</span>
+</code></pre>
+<p>Console/Inspect Element Script:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-keyword">let</span> l=<span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"script"</span>);l.src=<span class="hljs-string">"https://undercovergoose.github.io/quizlet/gimkit/gimkit.js"</span>;<span class="hljs-built_in">document</span>.body.appendChild(l);}();
+</code></pre>
+<h2 id="quizizz-cheats">Quizizz Cheats</h2>
+<p>
+    These are from this
+    <a href="https://github.com/bob486/quizlet/blob/master/quizizz/README.md"
+        >repository</a
+    >
+</p>
+<ol>
+    <li>
+        Join quizizz and go through questions, when finished, press &quot;Study
+        Flashcards&quot; and <strong>run the script.</strong>
+    </li>
+    <li>
+        Then join the quizizz again, or start another attempt.
+        <strong>Run script</strong> and you are done! <br />
+        Bookmarklet Script:
+        <pre><code class="lang-js">javascript:(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-keyword">let</span> l=<span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"script"</span>);l.src=<span class="hljs-string">"https://undercovergoose.github.io/quizlet/quizizz/script.js"</span>;<span class="hljs-built_in">document</span>.body.appendChild(l);}());<span class="hljs-keyword">void</span> <span class="hljs-number">0</span>
+</code></pre>
+        Alternate Script:
+        <pre><code class="lang-js">javascript:(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-keyword">let</span> l=<span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"script"</span>);l.src=<span class="hljs-string">"https://undercovermoose.github.io/quizizzjs/script.js"</span>;<span class="hljs-built_in">document</span>.body.appendChild(l);}());<span class="hljs-keyword">void</span> <span class="hljs-number">0</span>
+</code></pre>
+        You can run the above scripts in the console or in the inspect element,
+        just remove the <code>javascript:</code> part and the
+        <code>void 0</code> part at the end.
+    </li>
+</ol>
